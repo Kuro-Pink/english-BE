@@ -1,0 +1,132 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">My English</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav__item nav__item--notify">
+          <a href="">
+            <i class="fa-regular fa-bell nav__icon--link"></i>
+          </a>
+          <p class="nav__item--link">Thông báo</p>
+
+          <!-- Notify -->
+          <div class="notify notify__corner">
+            <header class="notify__header">
+              <h3>Thông báo mới nhận</h3>
+            </header>
+            <ul class="notify__list">
+              <li class="notify__item">
+                <a href="" class="notify__link">
+                  <img
+                    src="/img/Notify/Notify-girl.jpg"
+                    alt="Notify__img"
+                    class="notify__img"
+                  />
+                  <div class="notify__info">
+                    <p class="notify__name">Mỹ phầm Ohui chính hãng giúp bổ sung
+                      vitamin A+</p>
+                    <p class="notify__desc">Mô tả mỹ phẩm Ohui chính hãng </p>
+                  </div>
+                </a>
+              </li>
+              <li class="notify__item">
+                <a href="" class="notify__link">
+                  <img
+                    src="/img/Notify/images (1).jpg"
+                    alt="Notify__img"
+                    class="notify__img"
+                  />
+                  <div class="notify__info">
+                    <p class="notify__name">Mỹ phầm Ohui chính hãng giúp bổ sung
+                      vitamin B+</p>
+                    <p class="notify__desc">Mô tả mỹ phẩm Ohui chính hãng</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <footer class="notify__footer">
+              <a href="" class="notify__footer--btn">Xem tất cả</a>
+            </footer>
+          </div>
+        </li>
+
+        {{! Help }}
+        <li class="nav__item nav__item--link">
+          <a href="">
+            <i class="fa-regular fa-circle-question nav__icon--link"></i>
+          </a>
+          <p class="nav__item--link">Trợ giúp</p>
+        </li>
+        <li class="nav-item dropdown nav__item">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Công cụ
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/courses/create">Thêm Unit</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/me/stored/courses">Kho Unit</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Đăng xuất</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/questions/create">Thêm câu hỏi</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/me/stored/questions">Kho câu hỏi</a>
+          </div>
+        </li>
+        <!-- Đã login -->
+        <li class="nav-item dropdown nav__item nav__item--user">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img src="/img/Logo/Logo (2).png" alt="Avt" class="user__img" />
+            <span class="user__name">{{user.username}}</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Tài khoản</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Bài học</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/authens/logout">Đăng xuất</a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </li>
+        {{! <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> }}
+      </ul>
+      {{! <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> }}
+    </div>
+  </div>
+</nav>
+<script>
+
+</script>

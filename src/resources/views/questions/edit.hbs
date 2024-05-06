@@ -1,0 +1,19 @@
+<div class="mt-4">
+    <h3>Thêm câu hỏi</h3>
+    <form class="mt-4" method="POST" action="/questions/update/{{question._id}}?_method=PUT">
+        <div class="mb-3">
+            <label for="content" class="form-label">Nội dung:</label>
+            <input name="content" value="{{question.content}}" type="text" class="form-control" id="content">
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Câu hỏi:</label>
+            <input name="title" value="{{question.title}}" type="text" class="form-control" id="title">
+        </div>
+        <div class="mb-3">
+            <label for="answer" class="form-label">Đáp án:</label>
+            <input name="answer" value="{{question.answer}}" type="text" class="form-control" id="answer">
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Thêm câu hỏi</button>
+    </form>
+</div>

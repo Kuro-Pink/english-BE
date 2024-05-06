@@ -1,0 +1,39 @@
+<div class="main">
+  <form action="/authens/signin" method="POST" class="form" id="loginForm">
+    <h3 class="heading">Đăng nhập!</h3>
+    <div class="spacer"></div>
+    <div class="form-group">
+      <label for="code" class="form-label">Mã học sinh</label>
+      <input
+        id="code"
+        name="code"
+        rules="required"
+        type="text"
+        placeholder="VD: Sơn Đặng"
+        class="form-control"
+      />
+      <span class="form-message"></span>
+    </div>
+    <div class="form-group">
+      <label for="password" class="form-label">Mật khẩu</label>
+      <input
+        id="password"
+        name="password"
+        rules="required|min:6"
+        type="password"
+        placeholder="Nhập mật khẩu"
+        class="form-control"
+      />
+      <span class="form-message"></span>
+      <span>Chưa có tài khoản?</span>
+      <a class="form-bonus" href="/authens/register ">Đăng ký.</a>
+    </div>
+    <button class="form-submit">Đăng nhập!</button>
+  </form>
+</div>
+
+<script src="/js/validator.js"></script>
+<script>
+  var formLogin = new Validator('#loginForm'); formLogin.onSubmit = function
+  (formData){ console.log(formData) }
+</script>

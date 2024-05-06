@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex1</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+	<!-- Main style -->
+</head>
+<body>
+	<div class="container" style="margin-top: 30px;">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">1. Choose the verbs in the box to complete the sentences. Make changes to the verb forms, if necessary.</h3>
+			</div>
+			<div class="panel-body">
+				<div class="panel panel-success">
+					<div class="panel-body">
+						<span style="margin-right: 20px;">have got a date</span>
+						<span style="margin-right: 20px;">in a relationship</span>
+						<span style="margin-right: 20px;">arguments</span>
+						<span style="margin-right: 20px;">sympathetic</span>
+						<span style="margin-right: 20px;">broke up</span>
+						<span style="margin-right: 20px;">lend an ear</span>
+						<span style="margin-right: 20px;">reconciled</span>
+						<span style="margin-right: 20px;">romantic relationship</span>
+					</div>
+				</div>
+				<div class="q_1">
+					1. Carol was willing to <input type="" id="an_1" size="8">  to John when he <input type="" id="an_2" size="8"> with his girlfriend.<br>
+				</div><br>
+				<div class="q_2">
+					2. James and his father were <input type="" id="an_3" size="8">  after an argument.<br>
+				</div><br>
+				<div class="q_3">
+					3. Their close friendship turned into a <input type="" id="an_4" size="8"><br>
+				</div><br>
+				<div class="q_4">
+					4. Ann and John are <input type="" id="an_5" size="8"> but are always having a lot of <input type="" id="an_6" size="8">.<br>
+				</div><br>
+				<div class="q_5">
+					5. I feel really exited because I <input type="" id="an_7" size="8"> with Laura tomorrow.<br>
+				</div><br>
+				<div class="q_6">
+					6. A true friend is someone who is <input type="" id="an_8" size="8"> and always willing to help.<br>
+				</div><br>
+				<div class="an">
+					<button type="button" class="btn btn-success" onclick="Check();">Check</button>
+					<span id="time">05:00</span> minutes!
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	function Check(){
+		var f = 0;
+		var answer = new Array('lend an ear','broke up','reconciled','romantic relationship','in a relationship','arguments','have got a date','sympathetic');
+		for (var i = 1; i<=8 ; i++) {
+			var dapan = $("#an_"+i).val();
+			if (!dapan) {
+				alert("Please enter a complete answer.");
+				$("#an_"+i).focus();
+				return false;
+			}
+			if (dapan != answer[i-1]) {
+				f++;
+				var ch = true;
+			}
+		}
+		if (ch == true) {
+			alert("The number of correct answers is: " + Math.floor((8-f)*100/8)+ "%");
+		}else{
+			alert("You have answered correctly complete.");
+		}
+
+	}
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+jQuery(function ($) {
+    var fiveMinutes = 60 * 5,
+        display = $('#time');
+    startTimer(fiveMinutes, display);
+});
+</script>
+</body>
+</html>

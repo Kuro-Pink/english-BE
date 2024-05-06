@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise 4</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+	<!-- Main style -->
+	<style type="text/css">
+		html, body {
+			background: url(img/bg/3.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" style="margin-top: 30px; font-size: 16px;">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">4. Decide the following statements are true (T) or false (F) according to the information given in the passage.</h3>
+			</div>
+			<div class="panel-body"><br>
+				<center>Becoming independent</center>
+			 	<p style="text-indent: 25px;">Many young people strive to be independent. That means you are able to take care of yourself, and you don't have to rely on anyone else. However, to live independently, you need a number of life skills in order not to depend on your parents and older brothers or sisters. One of the most important skills is time management which can help you build your confidence and self-esteem. With good time management skills, you can perform your daily tasks, including your responsibilities at school and at home with pleasing results. Moreover, you will not feel stressed when exam dates are approaching. These skills can also help you act more independently and responsibly, get better grades at school and have more time for your family and friends. </p>
+			 	<p style="text-indent: 25px;">Developing time-management skills is not as challenging as you may think. Firstly, make a plan for things you need to do, including appointments and deadlines. Using a diary or apps on mobile devices will remind you of what you need to accomplish and when you need to accomplish it. Secondly, prioritize your activities. You need to decide which tasks are the most urgent and important and then, concentrate on these first. This way, you may not be at a loss to deal with too much work at the same time. Thirdly, develop routines because routines, when established, take less time for you to do your tasks. </p>
+				<p style="text-indent: 25px;">Time management skills are not hard to develop; once you master them, you will find out that they are great keys to success and you can become independent.</p>
+
+				<br><br>
+				<h4>Decide whether the following statements are True, False</h4>
+				<div class="an_1">
+					<div  class="col-md-12">26. There are many young people try to be  independent.</div>
+					<div  class="col-md-1"><input type="radio" name="an_1" value="T">True</div>
+					<div class="col-md-11"><input type="radio" name="an_1" value="F">False</div>
+				</div>
+				<div class="an_2">
+					<div  class="col-md-12">27. You will feel stressed when exam dates are approaching</div>
+					<div  class="col-md-1"><input type="radio" name="an_2" value="T">True</div>
+					<div class="col-md-11"><input type="radio" name="an_2" value="F">False</div>
+				</div>
+				<div class="an_3">
+					<div  class="col-md-12">28. It is very hard to develop time management skills.</div>
+					<div  class="col-md-1"><input type="radio" name="an_3" value="T">True</div>
+					<div class="col-md-11"><input type="radio" name="an_3" value="F">False</div>
+				</div>
+				<div class="an_4">
+					<div  class="col-md-12">29. Teenagers can have more confidence and self-esteem when they are good at managing their time.</div>
+					<div  class="col-md-1"><input type="radio" name="an_4" value="T">True</div>
+					<div class="col-md-11"><input type="radio" name="an_4" value="F">False</div>
+				</div>
+				<div class="an_5">
+					<div  class="col-md-12">30. Good time-management can help teenagers get better grades at school.</div>
+					<div  class="col-md-1"><input type="radio" name="an_5" value="T">True</div>
+					<div class="col-md-11"><input type="radio" name="an_5" value="F">False</div>
+				</div>
+				<div class="btn_an">
+					<button type="button" class="btn btn-success" style="margin-top: 15px;" onclick="Check();">Check</button>
+					<a class="btn btn-danger" style="margin-top: 15px;" href="index.html">Index</a>
+					<a class="btn btn-warning" style="margin-top: 15px;" href="Ex3.html">Previous</a>
+					<a class="btn btn-info" style="margin-top: 15px;" href="Ex5.html">Next</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	function Check(){
+		var f = 0;
+		var answer = new Array('T','F','F','T','T');
+		for (var i = 1; i<=5 ; i++) {
+			var dapan = $('input[name="an_'+i+'"]:checked').val();
+			if (!dapan) {
+				alert("Please enter a complete answer.");
+				return false;
+			}
+			if (dapan != answer[i-1]) {
+				f++;
+				var ch = true;
+			}
+		}
+		if (ch == true) {
+			alert("The number of correct answers is: " + Math.floor((5-f)*100/5)+ "%");
+		}else{
+			alert("You have answered correctly complete.");
+		}
+
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise 5</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+	<!-- Main style -->
+	<style type="text/css">
+		html, body {
+			background: url(img/bg/4.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" style="margin-top: 30px; font-size: 16px;">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">5. Read the passage and choose the best answers to the questions.</h3>
+			</div>
+			<div class="panel-body"><br>
+				<p style="text-indent: 30px;">The Importance Of Being Independent.</p>
+				<p style="text-indent: 30px;">The ability to be independent is something that not everyone possesses. You need to be independent in order to survive in the world. Learning to support yourself is fundamental for any success you ever hope to achieve.</p>
+				<p style="text-indent: 30px;">We rely on others far more than it is necessary. People put their happiness in the hands of a significant other, thinking this will bring them fulfillment. This is a fatal error too many people make these days. People are unable to be independent for a variety of reasons, with fear at the forefront, the fear of being alone, the fear of rejection and the fear of the future. As we get older, we need to learn how to make the best decisions that allow us to live our lives the way we want to. Developing into an autonomous person can be one of the most worthwhile outcomes we can strive for ourselves.</p>
+				<p style="text-indent: 30px;">Make decisions by and for yourself, whatever they may be. Don't ask for advice, do what you want and learn from your own mistakes. Many people are afraid to think for themselves because that involves taking responsibility for their own lives. This is just one way people become dependent. We are born alone and we die alone, so we each have to take responsibility for our lives at every step along the way.</p>
+
+
+				<br><br>
+				<div class="an_1">
+					<div class="col-md-12">1. Why do we need to be independent?.</div>
+					<div class="col-md-5"><input type="text" id="an_1" class="form-control"></div>
+					<div class="col-md-7"></div>
+				</div>
+				<div class="an_2">
+					<div class="col-md-12">2. What is the consequence of putting happiness in others’ hand?.</div>
+					<div class="col-md-5"><input type="text" id="an_2" class="form-control"></div>
+					<div class="col-md-7"></div>
+				</div>
+				<div class="an_3">
+					<div class="col-md-12">3. List at least 3 reasons that people are unable to be independent?</div>
+					<div class="col-md-5"><input type="text" id="an_3" class="form-control"></div>
+					<div class="col-md-7"></div>
+				</div>
+				<div class="an_4">
+					<div class="col-md-12">4. What should we do when we get older?</div>
+					<div class="col-md-5"><input type="text" id="an_4" class="form-control"></div>
+					<div class="col-md-7"></div>
+				</div>
+				<div class="an_5">
+					<div class="col-md-12">5. What make people afraid to think for themselves?</div>
+					<div class="col-md-5"><input type="text" id="an_5" class="form-control"></div>
+					<div class="col-md-7"></div>
+				</div>
+				<div class="col-md-12">
+					<button type="button" class="btn btn-success" style="margin-top: 15px;" onclick="Check();">Check</button>
+					<a class="btn btn-danger" style="margin-top: 15px;" href="index.html">Index</a>
+					<a class="btn btn-warning" style="margin-top: 15px;" href="Ex4.html">Previous</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	function Check(){
+		var f = 0;
+		var answer = new Array('We need to be independent in order to survive in the world.','It will bring us fulfillment.','Fear at the forefront, the fear of being alone, the fear of rejection.','We need to learn how to make the best decisions that allow us to live our lives the way we want to.',"They don’t want to take responsibility for their own lives.");
+		for (var i = 1; i<=5 ; i++) {
+			var dapan = $("#an_"+i).val();
+			dapan = dapan.trim();
+			if (!dapan) {
+				alert("Please enter a complete answer.");
+				$("#an_"+i).focus();
+				return false;
+			}
+			if (dapan == answer[i-1] || dapan+"." == answer[i-1]) {
+				//t++;
+				var ch = false;
+			}else{
+				f++;
+				var ch2 = false;
+			}
+		}
+		if (ch2 == false) {
+			alert("The number of correct answers is: " + Math.floor((5-f)*100/5)+ "%");
+		}else{
+			alert("You have answered correctly complete.");
+		}
+
+	}
+</script>
+</body>
+</html>

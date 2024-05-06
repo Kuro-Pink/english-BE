@@ -1,0 +1,73 @@
+/* SET UP CƠ BẢN CHO CSS */
+
+:root {
+    --navbar-color: linear-gradient( #9820cb, rgba(0, 0, 0,0.6));
+    --gradient-color: linear-gradient(to right, #1dc7c7f1, #901bfa, #eb7625);
+    --gradient-color-hover: linear-gradient(to right, #eb7625, #901bfa,#fa1bb7);
+    --primary-color: #eb7625;
+    --white-color: #fff;
+    --black-color:#000;
+    --text-color: #333;
+    --text-desc: #888;
+    --border-color: #bdbdbd;
+    --bar-color: #250430;
+    --desc--color: #aaa;
+    --background1-color: rgba(0, 0, 0, 0.1);
+    --background2-color: rgba(21, 98, 165, 0.1);
+
+    --aqua-color: #1dc7c7f1;
+    --purple-color: #901bfa;
+
+    --topbar-height: 3.2rem;
+    --botbar-height: 5.6rem;
+}
+
+* {
+    /*Dùng "inherit" để kế thừa thuộc tính của thằng "boder-box" */
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+html {
+    font-size: 62.5%;
+    line-height: 16px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth ;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+    0% {  
+        opacity: 0.4;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slide {
+    0% {  
+    background: var(--gradient-color);
+    }
+    
+    100% {
+    background: var(--gradient-color-hover);
+    }
+}
+
+@keyframes growth {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,20 @@
+@import 'variable';
+
+h1 {
+    color: $main-color;
+    background-color: blue;
+}
+
+h2 {
+    color: pink;
+    background-color: purple;
+    font-size: 1.6rem;
+}
+
+p {
+    color: #333;
+}
+
+.course-item {
+    margin-top: 16px;
+}
